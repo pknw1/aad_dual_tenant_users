@@ -1,0 +1,10 @@
+,,,local_admin,,,,local_user,,,,guest accounts,,,,
+timestamp,module_name,user_email,exists,requested,calculated,action,exists,requested,calculated,action,exists,requested,calculated,action,type
+May 28 17:23:42 2023,aad_dual_tenant_users,paul.kelleher@contino.io,FALSE,TRUE,adm-paul.kelleher@,TRUE,TRUE,TRUE,paul.kelleher@,FALSE,TRUE,TRUE,paul_kelleher_contino_io#EXT#@,FALSE,ADMIN
+,,,"ussing rhe calculated account name, the process checks to see if it exists in the current directory 
+if it does not exist, and requested is TRUE, then it will attempt creation
+if it does exist, and the requested is FALSE, it will remove the account ONLY if in this TFSTATE
+if exists false and requested true, this will set action to true - crteating the resource
+all calculated accounts are @squad0.onmicrosoft.com",,,,,,,,"there will only ever be one instance of a guest account as it is invited into the target and uses the source email - so here the accont will only be created once and the role of Global Admin will be added or removed based on the user/admin type
+
+all guest accounts are @squad0.onmicrosoft.com",,,,
