@@ -1,5 +1,5 @@
 module "create_cross_tenant_user" {
-  source = "github.com/pknw1/aad_dual_tenant_users?ref=0.0.1"
+  source = "github.com/pknw1/aad_dual_tenant_users?ref=latest"
 
   providers = {
     azuread.source = azuread.source,
