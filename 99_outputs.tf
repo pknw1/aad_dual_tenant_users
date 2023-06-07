@@ -1,5 +1,7 @@
 output "source_user_email" { value = var.source_user_email }
+
 output "source_user_aad_account" { value = data.azuread_user.user_lookup_source_tenant }
+
 output "create_guest_admin" { value = var.target_guest_admin }
 output "guest_admin_username" { value = local.target_guest_admin }
 
@@ -16,7 +18,9 @@ output "logline_csc" {
   value = local.logline
 }
 
-
+output "summary" {
+  value = local.summary
+}
 
 
 resource "local_file" "outputs" {
